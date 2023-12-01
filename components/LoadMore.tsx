@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 import { AnimeProp } from "@/components/AnimeCard";
-import AnimeCard from "@/components/AnimeCard";
+import AnimeGrid from "./AnimeGrid";
 
 let page = 2;
 
@@ -25,12 +25,7 @@ function LoadMore() {
 
   return (
     <>
-      <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-        {data.map((item: AnimeProp, index: number) => {
-          const adjustIndex = index % 8;
-          return <AnimeCard key={item.id} anime={item} index={adjustIndex} />;
-        })}
-      </section>
+      <AnimeGrid data={data} />
       <section className="flex justify-center items-center w-full">
         <div ref={ref}>
           <Image
