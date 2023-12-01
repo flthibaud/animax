@@ -1,6 +1,6 @@
-# Anime Vault
+# Animax
 
-Anime Vault is a web application that allows users to browse their favorite anime all in one place.
+Animax is a web application that allows users to browse their favorite anime all in one place.
 
 ## Project Structure
 
